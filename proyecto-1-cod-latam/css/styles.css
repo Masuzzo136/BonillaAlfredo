@@ -1,0 +1,289 @@
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+
+
+
+
+header {
+    font-family: monospace;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+.navbar {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    height: 90px;
+    border-bottom: 3px solid rgb(243, 237, 237);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+    
+    
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+.logo img {
+    margin-right: auto;
+    margin-left: 0;
+    display: flex;
+    justify-content: right;
+  }
+
+
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family: 'Alkatra', cursive;
+
+}
+
+#toggler,
+.navbar label{
+    display: none;
+}
+@media screen and 
+(max-width: 100px){
+
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    
+    
+}
+
+.list{
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+#toggler:checked ~ .menu{
+    max-height: 100%;
+}
+}
+
+
+
+.body {
+
+    display: flex;
+    
+    flex-direction: column;
+    min-height: 100vh;
+    
+
+}
+
+#b {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Alkatra', cursive;
+    
+    
+    
+}
+
+#c {
+    background-color: rgba(175, 89, 158, 0.3);
+    color: #0f0f0f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+    border: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Alkatra', cursive;
+}
+
+
+.texto-negrita {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+
+.j {
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#e {
+    background-color: #af599e;
+    font-family: "Sofia", sans-serif;
+    text-align: center;
+    color: #fbfbfb;
+    margin-top: 20px;
+    height: 90px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Alkatra', cursive;
+    line-height: 1.2;
+    
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    
+
+}
+
+#f {
+    border: 1px; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #af599e; /*color botón*/
+    color: #fbfbfb; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    text-size-adjust: 20px;
+    width:200px;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+#h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    shape-outside: circle();
+    clip-path: circle();
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+#a {
+
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: 'Alkatra', cursive;
+}
+
+#d {
+
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+  
+.iconos {
+
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    min-width: 50px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 110px;
+    
+}
+
+
+
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
